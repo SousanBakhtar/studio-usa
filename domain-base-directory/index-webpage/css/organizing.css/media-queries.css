@@ -1,0 +1,133 @@
+@media (pointer: coarse) {
+  .nav {
+    @apply py-[0] h-[40px];
+
+    & > * {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+/* 1440px */
+@media (max-width: 90rem) {
+}
+
+/* 1200px */
+@media (max-width: 75rem) {
+}
+
+/* 992px */
+@media (max-width: 62rem) {
+  /* (13px * 100) / 16rem => 1rem = 12px  */
+  :root {
+    --root-size: 81.25%;
+  }
+
+  /* footer */
+  footer {
+    /* top */
+    .footer-top-side {
+      gap: 3rem;
+
+      /* footer-left-side */
+      .footer-left-side {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+/* 768px */
+@media (max-width: 48rem) {
+  /* (14px * 100) / 16rem => 1rem = 12px  */
+  :root {
+    --root-size: 87.5%;
+  }
+
+  /* product-section */
+  .product-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(130px, auto);
+    border-top: 1px solid var(--color-3);
+    background: var(--color-3);
+  }
+
+  /* contact-us-section */
+  .contact-us-section {
+    grid-column: 1/-1;
+  }
+
+  /* footer */
+  footer {
+    font-size: 0.6rem;
+  }
+}
+
+/* 576px */
+@media (max-width: 36rem) {
+  .nav-small-divice {
+    li {
+      padding: 5vmin 6vmin;
+      font-size: calc(var(--root-size) + 2.2vw);
+    }
+  }
+
+  video {
+    width: 100%;
+    aspect-ratio: 1/1.6;
+  }
+}
+
+@media (max-width: 414px) {
+  /* product-section */
+  .product-section {
+    grid-template-columns: 1fr 1fr;
+
+    article {
+      div {
+        padding: 5vmin;
+      }
+    }
+  }
+
+  /* container-fixed */
+  .container-fixed {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 310px) {
+  /* contact-us-section */
+  .contact-us-section {
+    grid-column: span 1;
+
+    /* top */
+    p {
+      font-size: 1vmin;
+    }
+
+    form {
+      font-size: 1vmin;
+    }
+  }
+
+  /* footer */
+  footer {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 247px) {
+  /* product-section */
+  .product-section {
+    grid-template-columns: auto;
+  }
+
+  /* container-fixed */
+  .container-fixed {
+    font-size: 0.4rem;
+    left: 8vmin;
+  }
+}

@@ -1,0 +1,10 @@
+html {
+  font-size: var(--root-size);
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}

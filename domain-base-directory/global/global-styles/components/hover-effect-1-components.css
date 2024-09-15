@@ -1,0 +1,8 @@
+.hover-effect-1 {
+  & {
+    @apply transition-all;
+  }
+  &:hover {
+    transform: translateY(-2px) scale(1.1, 1);
+  }
+}

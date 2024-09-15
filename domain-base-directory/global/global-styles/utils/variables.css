@@ -1,0 +1,23 @@
+:root {
+  --color-fff: #fff;
+
+  --color-1: #777777;
+  --color-2: #e5e5e5;
+  --color-3: #24241f;
+  --color-4: #e0e0d4;
+  --color-5: #d2d3d0;
+  --color-6: #24241e;
+  --color-7: #d1d3cf;
+  --color-8: #24241e;
+
+  /* (12px * 100) / 16rem => 1rem = 12px  */
+  --root-size: 75%;
+}
+
+.flex-items-cntr-justify-center-w-fit {
+  @apply flex items-center justify-center w-fit;
+}
+
+.flex-flex-wrap-justify-between {
+  @apply flex flex-wrap justify-between items-center;
+}

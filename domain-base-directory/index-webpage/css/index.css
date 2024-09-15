@@ -1,0 +1,257 @@
+/* u must import tailwind layer in here, before any code!*/
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* this place is for import ur file */
+
+@import "../../global/global-styles/base/rest.css";
+@import "../../global/global-styles/base/typography.css";
+@import "../../global/global-styles/utils/variables.css";
+@import "../../global/global-styles/components/underline-hover-components.css";
+@import "../../global/global-styles/components/pop-up-components.css";
+@import "../../global/global-styles/components/hover-effect-1-components.css";
+@import "./organizing.css/media-queries.css";
+
+@layer utilities {
+  body {
+    background: var(--color-7);
+    padding-bottom: 2rem;
+  }
+
+  /* ------- global-html-code ------ */
+
+  /* container-fixed */
+  .container-fixed {
+    position: fixed;
+    left: 4vmin;
+    bottom: 2rem;
+
+    width: fit-content;
+
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 4vmin;
+    font-size: 0.9rem;
+    font-variant-caps: all-small-caps;
+    padding: 1.2vmin 2vmin;
+    background-color: #00000008;
+    border-radius: 10px;
+
+    /* en */
+    & > a:nth-child(1) {
+      text-decoration: underline;
+    }
+
+    /* whatapp-link */
+    & > a:nth-child(3) {
+      display: flex;
+      align-items: center;
+      gap: 0.1vmin;
+    }
+  }
+
+  /* new-collocation */
+  .link-new-collections {
+    display: block;
+    text-align: center;
+    margin: auto;
+    max-width: 1800px;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    font-size: calc(var(--root-size) + 0.5vw);
+    padding: 1.4vmin;
+    letter-spacing: 0.5px;
+    font-variant-caps: all-small-caps;
+  }
+
+  /* nav */
+  .nav {
+    font-size: calc(var(--root-size) + 0.4vw);
+    font-variant-caps: all-small-caps;
+
+    &-left-side {
+    }
+
+    &-logo-center {
+      font-size: calc(var(--root-size) + 1.2vw);
+    }
+
+    &-right-side {
+      .usd-hover-show-menu-container:hover option {
+        display: block;
+      }
+    }
+
+    ul > li > a {
+      @mixin underline-hover-component;
+    }
+
+    svg {
+      width: 1.3rem;
+      height: 1.3rem;
+      margin-top: 0.6vmin;
+    }
+  }
+  .nav-menu-toggle {
+    font-variant-caps: all-small-caps;
+  }
+
+  .nav-small-divice {
+    border-bottom: 1px solid var(--color-3);
+
+    li {
+      border-top: 1px solid var(--color-3);
+      padding: 2.3vmin 6vmin;
+      font-size: calc(var(--root-size) + 1.8vw);
+      font-weight: 300;
+      font-variant-caps: all-small-caps;
+    }
+  }
+
+  video {
+    width: 40vmin;
+    /* width: 30rem; */
+    aspect-ratio: 1/1.9;
+  }
+
+  /* product-section */
+  .product-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(130px, auto);
+    border-top: 1px solid var(--color-3);
+
+    a {
+      display: inline-block;
+      border-right: 1px solid var(--color-3);
+      border-bottom: 1px solid var(--color-3);
+      background: var(--color-7);
+    }
+
+    article {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      color: inherit;
+
+      div {
+        display: flex;
+        flex-flow: wrap;
+        gap: 1.2vmin;
+        width: 100%;
+        justify-content: center;
+        font-size: calc(var(--root-size) + 0.3vw);
+        padding: 3vmin;
+        font-variant-caps: all-small-caps;
+        margin-top: 1.5vmin;
+        white-space: nowrap;
+      }
+    }
+
+    figure {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      mix-blend-mode: multiply;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  /* contact-us-section */
+  .contact-us-section {
+    grid-column: span 2;
+    text-align: center;
+
+    align-self: flex-start;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: 5rem 0;
+
+    background: var(--color-8);
+    color: var(--color-2);
+
+    /* top */
+    p {
+      line-height: 1.2;
+      font-size: calc(var(--root-size) + 0.3vw);
+      font-variant-caps: all-small-caps;
+    }
+
+    form {
+      display: flex;
+      width: 60%;
+      margin: auto;
+      border-bottom: 0.5px solid var(--color-2);
+      font-size: calc(var(--root-size) + 0.2vw);
+
+      & > * {
+        padding: 0.4vmin;
+        appearance: none;
+        background-color: transparent;
+      }
+
+      input::placeholder {
+        color: var(--color-2);
+      }
+
+      input:nth-child(1) {
+        flex-grow: 1;
+      }
+
+      input:nth-child(2) {
+      }
+    }
+  }
+
+  /* footer */
+  footer {
+    padding: 2vmin 7vmin;
+    text-transform: uppercase;
+    color: var(--color-3);
+    font-weight: 500;
+    margin-top: 7vmin;
+    font-size: 0.9rem;
+
+    /* top */
+    .footer-top-side {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
+      /* font-size: calc(var(--root-size) + 0.2vw); */
+
+      & > * {
+        flex: 1;
+      }
+
+      /* footer-center-side */
+      .footer-center-side {
+        line-height: 2;
+      }
+
+      /* footer-right-side */
+      .footer-right-side {
+        line-height: 2;
+        text-align: right;
+      }
+    }
+
+    /* copyright */
+    & > p {
+      margin-top: 10vmin;
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+}

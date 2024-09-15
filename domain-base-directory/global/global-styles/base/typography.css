@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Gb";
+  src: url(../../fonts/robotech-gp/ROBOTECH-GP.ttf) type= "turetype";
+}
+body {
+  line-height: 1.2;
+}
