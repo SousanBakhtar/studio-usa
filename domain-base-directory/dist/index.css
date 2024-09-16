@@ -893,6 +893,12 @@ body {
       justify-content: center;
     }
 }
+/* 2000 px */
+@media (max-width: 2000px) {
+  :root {
+    --root-size: 150%;
+  }
+}
 /* 1440px */
 @media (max-width: 90rem) {
 }
